@@ -335,6 +335,8 @@ cleos get currency balance eosio.token test2 XRP
 
 # 十一 编译eos.system
 
+参考 https://developers.eos.io/eosio-nodeos/docs/bios-boot-sequence
+
 1 把eosio.contracts/eosio.token/include/eosio.token/文件夹拷贝到
 
  /eosio.contracts/eosio.system/include下
@@ -363,4 +365,11 @@ cleos set contract eosio /contract/eosio.contracts/eosio.system/ -p eosio@active
 
 
 
-创建账户并分配
+初始化eos.system合约
+
+cleos push action eosio init '["0", "4,SYS"]' -p eosio@active
+
+![1548576859268](assets/1548576859268.png)
+
+创建账户并分配资源
+
