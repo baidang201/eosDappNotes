@@ -8,13 +8,13 @@
 
 测试网地址：[https://api-kylin.eosasia.one](https://api-kylin.eosasia.one/)
 
-2.创建自己的账户(todo(liyh) 用统一私钥创建系统账户，并分配资源)
+2.创建自己的账户
 
 搭建测试网络的同学请创建系统账户，创建系统账户之前请创建系统token：SYS、EOS到eosio.token下
 
 系统账户：eosio.stake、eosio.saving、eosio.ramfee、eosio.ram、eosio.names
 
-eosio.msig、eosio.bpay 
+eosio.msig、eosio.bpay 、eosio.vpay 
 
 使用EOS的system合约创建账户，并且分配RAM，CPU资源。
 
@@ -242,6 +242,8 @@ cleos create account eosio  eosio.names  EOS5vjbKn5N5JPMQcC3V8Cn6GjLV7yFytw3tmeK
 cleos create account eosio  eosio.msig  EOS5vjbKn5N5JPMQcC3V8Cn6GjLV7yFytw3tmeKKUtPe1reADDusf EOS5vjbKn5N5JPMQcC3V8Cn6GjLV7yFytw3tmeKKUtPe1reADDusf
 cleos create account eosio  eosio.bpay  EOS5vjbKn5N5JPMQcC3V8Cn6GjLV7yFytw3tmeKKUtPe1reADDusf EOS5vjbKn5N5JPMQcC3V8Cn6GjLV7yFytw3tmeKKUtPe1reADDusf
 
+cleos create account eosio  eosio.vpay  EOS5vjbKn5N5JPMQcC3V8Cn6GjLV7yFytw3tmeKKUtPe1reADDusf EOS5vjbKn5N5JPMQcC3V8Cn6GjLV7yFytw3tmeKKUtPe1reADDusf
+
 
 
 查看smith  eosio.token的状态
@@ -282,6 +284,16 @@ cleos push action eosio.token create '[ "eosio", "1000000000.0000 SYS"]' -p eosi
 cleos push action eosio.token create '[ "eosio", "1000000000.0000 EOS"]' -p eosio.token@active
 
 ![1548518214869](assets/1548518214869.png)
+
+
+
+发行系统代币给eosio
+
+cleos push action eosio.token issue '["eosio", "10000.0000 SYS", "memotest"]'  -p eosio
+
+cleos push action eosio.token issue '["eosio", "10000.0000 EOS", "memotest"]'  -p eosio
+
+![1548593296291](assets/1548593296291.png)
 
 
 
@@ -333,7 +345,7 @@ cleos get currency balance eosio.token test2 XRP
 
 
 
-# 十一 编译eos.system
+# 十一 编译eos.system，申请账户分配资源
 
 参考 https://developers.eos.io/eosio-nodeos/docs/bios-boot-sequence
 
@@ -373,3 +385,14 @@ cleos push action eosio init '["0", "4,SYS"]' -p eosio@active
 
 创建账户并分配资源
 
+ cleos system newaccount eosio testaaa55555 EOS6GQa2Nhiryv6NvrjVgbctuH5meD2ckGXUQzhtavptK4qjhSsVF EOS6GQa2Nhiryv6NvrjVgbctuH5meD2ckGXUQzhtavptK4qjhSsVF --stake-net "1000000.0000 SYS" --stake-cpu "1000000.5000 SYS" --buy-ram-kbytes 5000000
+
+![1548595601108](assets/1548595601108.png)
+
+注意：如提示assertion failure with message: must purchase a positive amount，把--buy-ram-kbytes的参数调大即可
+
+
+
+cleos get account testaaa55555
+
+![1548595657301](assets/1548595657301.png)
