@@ -283,7 +283,7 @@ cleos push action mygame kpi '["test1", 2]' -p mygame
 
 
 
-六 怎么减少RAM资源消耗的使用
+# 七 怎么减少RAM资源消耗的使用
 
 1 业务设计，减少数据上链
 
