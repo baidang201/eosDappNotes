@@ -24,7 +24,7 @@ cleos push action testaaa11111 create '[ "testaaa11111", "1000000.0000 KPI"]' -p
 
 
 
-# 四 发行KPI代币 100万   1000000.0000
+# 四 发行KPI代币100万到testaaa11111账户
 
 cleos push action testaaa11111 issue '["testaaa11111", "1000000.0000 KPI", "memotest"]' -p testaaa11111
 
@@ -32,7 +32,7 @@ cleos push action testaaa11111 issue '["testaaa11111", "1000000.0000 KPI", "memo
 
 
 
-#五 下载damo
+# 五 下载damo
 
 git clone https://github.com/wangzheng2006/lbc.git
 
