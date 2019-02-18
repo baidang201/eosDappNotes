@@ -1,3 +1,15 @@
+# 零 目标
+
+创建账户testaaa11111 ，发布eosio.token到 testaaa11111账户，并且发行代币KPI，发行数量100万。
+
+创建账户：testaaa22222。
+
+下载前端代码 地址：<https://github.com/wangzheng2006/lbc.git>
+
+运行html里面demo，demo运行前提 安装node.js环境，安装yarn包管理工具。
+
+
+
 # 一 创建账户 testaaa11111  testaaa22222
 
 cleos system newaccount eosio testaaa11111   EOS6Jc3XqZjc8sYp7KsXHrmWUZNHVW8zY5Z2rrSBy3LHvVwZWssre EOS6Jc3XqZjc8sYp7KsXHrmWUZNHVW8zY5Z2rrSBy3LHvVwZWssre --stake-net "1.0000 SYS" --stake-cpu "1.5000 SYS" --buy-ram-kbytes 5000000
