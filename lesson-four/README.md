@@ -92,9 +92,7 @@ Add Keys=>Import Key=>Text
 
 
 
-# 十一 选择链接的账户
-
-testaaa11111
+# 十一 查看密钥相关的账户
 
 ![1550543856213](assets/1550543856213.png)
 
