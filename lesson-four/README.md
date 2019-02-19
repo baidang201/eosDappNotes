@@ -70,3 +70,36 @@ chrome浏览器打开 http://localhost:8080/
 
 # ![1550496411626](assets/1550496411626.png)
 
+
+
+# 八 下载并安装scatter桌面版
+
+https://get-scatter.com/download
+
+
+
+# 九 增加测试网络
+
+![1550543597680](assets/1550543597680.png)
+
+
+
+# 十 添加账户私钥
+
+Add Keys=>Import Key=>Text
+
+![1550543807084](assets/1550543807084.png)
+
+
+
+# 十一 选择链接的账户
+
+testaaa11111
+
+![1550543856213](assets/1550543856213.png)
+
+# 十二 浏览器刷新 http://localhost:8080/，选择一个登录的账户，比如mygame
+
+![1550547091627](assets/1550547091627.png)
+
+![1550552039267](assets/1550552039267.png)
