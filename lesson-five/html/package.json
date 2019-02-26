@@ -1,0 +1,39 @@
+{
+  "name": "kpi-game",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "add": "^2.0.6",
+    "ajv": "^6.5.4",
+    "ajv-keywords": "^3.2.0",
+    "axios": "^0.18.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "clipboard": "^2.0.1",
+    "eosjs": "^20.0.0-beta3",
+    "mand-mobile": "^1.6.1",
+    "or": "^0.2.0",
+    "postcss-px2rem": "^0.3.0",
+    "scatter-js": "^2.5.2",
+    "scatterjs-core": "^2.7.9",
+    "scatterjs-plugin-eosjs": "^1.5.0",
+    "scatterjs-plugin-eosjs2": "^1.5.0",
+    "vue": "^2.5.17",
+    "vue-loaders": "^2.0.0",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
+    "yarn": "^1.13.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@vue/cli-plugin-babel": "^3.4.0",
+    "@vue/cli-service": "^3.0.3",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "vue-template-compiler": "^2.5.17"
+  }
+}
