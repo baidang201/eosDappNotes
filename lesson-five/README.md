@@ -243,8 +243,6 @@ cleos set contract test1 /contract/eosio.contracts/kpigame/ -p test1@active
 
 
 
-# 设置合约转账权限
-
 
 
 # 四 管理员新建任务
@@ -293,7 +291,11 @@ cleos push action test1 addtask '["task game2", 1, "1550757921", "2.0000 EOS"]' 
 
 注意，如果提示transaction took too long，修改config.ini
 
+```
 max-transaction-time=1000
+```
+
+
 
 #六 测试用户提交任务
 
