@@ -118,24 +118,27 @@ public:
         auto taskUserItem = tasku.find(taskitem->id);
         if(taskUserItem!=tasku.end()){            
 
-            tasku.modify(taskUserItem, _self, [&](auto &t){
-                t.is_end = 1;
-                t.end_time = current_time();
-            });
-        }
+            if(0 == taskUserItem->is_end){
+                tasku.modify(taskUserItem, _self, [&](auto &t){
+                    t.is_end = 1;
+                    t.end_time = current_time();
+                });
 
-        if ( taskUserItem->end_time <= taskitem->end_time) {            
-            //奖励
-            action(permission_level{_self, name("active")},
-            name("eosio.token"), name("transfer"),
-            std::make_tuple(_self, from,  taskitem->reward,
-            std::string("reward send eos")) ).send();
+                if ( taskUserItem->end_time <= taskitem->end_time) {            
+                    //奖励
+                    action(permission_level{_self, name("active")},
+                    name("eosio.token"), name("transfer"),
+                    std::make_tuple(_self, from,  taskitem->reward,
+                    std::string("reward send eos")) ).send();
 
-            //押金
-            action(permission_level{_self, name("active")},
-            name("eosio.token"), name("transfer"),
-            std::make_tuple(_self, from,  taskUserItem->reward,
-            std::string(" mortgage send eos")) ).send();
+                    //押金
+                    action(permission_level{_self, name("active")},
+                    name("eosio.token"), name("transfer"),
+                    std::make_tuple(_self, from,  taskUserItem->reward,
+                    std::string(" mortgage send eos")) ).send();
+                }
+            }
+            
         }
       }
     }
